@@ -5,7 +5,6 @@ Spyder Editor
 This is a temporary script file.
 """
 
-source activate tensorflow
 
 import pandas as pd
 import shutil
