@@ -41,16 +41,16 @@ for fold in  train_col:
         if not os.path.exists(directory):
             os.makedirs(directory)
     #Loop the files inside directory and move to corresponding folders
-    for filename in os.listdir("/home/rodrigo/datasience/projects/pri-matrixFac/micro_chimps/micro"):#train_subset:        
+    for filename in os.listdir("/home/rodrigo/datasience/projects/pri-matrixFac/micro"):#train_subset:        
         if str(filename) in str(train_subset):
-            string = str("/home/rodrigo/datasience/projects/pri-matrixFac/micro_chimps/micro/" + str(filename))
+            string = str("/home/rodrigo/datasience/projects/pri-matrixFac/micro/" + str(filename))
             string = string.replace("'","")
             string = string.replace("[","")
             string = string.replace("]","")
             #print(string)
             #shutil.copy(string, directory)
             filebase = directory + "/" + filename
-            filebase = filebase.replace(".mp4","_%05d.jpg")
+            filebase = filebase.replace(".mp4","_%05d.png")
             #print(string)
             #print(filebase)
             cmd = 'ffmpeg -i ' + string + ' -r 0.25 ' +  filebase+ ''
