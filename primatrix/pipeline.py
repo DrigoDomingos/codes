@@ -31,7 +31,7 @@ logging.info("Start - Preparing data for training")
 #Loop the mapping file
 for fold in  train_col:
     if fold not in ['filename','blank']:
-        train_subset = str(pd.DataFrame(train[train[fold] > 0]['filename'])).values.tolist()
+        train_subset = str(pd.DataFrame(train[train[fold] > 0]['filename']).values.tolist())
         #train_subset = train_subset.replace("'","")
         #train_subset = train_subset.replace("[","")
         #train_subset = train_subset.replace("]","")
