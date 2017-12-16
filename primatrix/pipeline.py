@@ -41,7 +41,7 @@ for fold in  train_col:
         if not os.path.exists(directory):
             os.makedirs(directory)
     #Loop the files inside directory and move to corresponding folders
-    for filename in os.listdir("/home/rodrigo/datasience/projects/pri-matrixFac/micro"):#train_subset:        
+    for filename in os.listdir("/home/rodrigo/datasience/projects/pri-matrixFac/micro/"):#train_subset:        
         if str(filename) in str(train_subset):
             string = str("/home/rodrigo/datasience/projects/pri-matrixFac/micro/" + str(filename))
             string = string.replace("'","")
