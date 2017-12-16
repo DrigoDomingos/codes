@@ -16,7 +16,7 @@ import logging
 train = pd.DataFrame(pd.read_csv('train_labels.csv', sep=','))
 train_col = list(train)
 train_subset= ''
-dir_base = "/home/rodrigo/datasience/projects/pri-matrixFac/tensorflow/tf_files/primatrix"
+dir_base = "/home/rodrigo/datascience/projects/pri-matrixFac/tensorflow/tf_files/primatrix"
 
 if os.path.exists(dir_base):
     shutil.rmtree(dir_base)
@@ -37,13 +37,13 @@ for fold in  train_col:
         #train_subset = train_subset.replace("]","")
         print(fold)
         #print(train_subset)
-        directory = "/home/rodrigo/datasience/projects/pri-matrixFac/tensorflow/tf_files/primatrix/" + fold
+        directory = "/home/rodrigo/datascience/projects/pri-matrixFac/tensorflow/tf_files/primatrix/" + fold
         if not os.path.exists(directory):
             os.makedirs(directory)
     #Loop the files inside directory and move to corresponding folders
-    for filename in os.listdir("/home/rodrigo/datasience/projects/pri-matrixFac/micro/"):#train_subset:        
+    for filename in os.listdir("/home/rodrigo/datascience/projects/pri-matrixFac/micro"):#train_subset:        
         if str(filename) in str(train_subset):
-            string = str("/home/rodrigo/datasience/projects/pri-matrixFac/micro/" + str(filename))
+            string = str("/home/rodrigo/datascience/projects/pri-matrixFac/micro/" + str(filename))
             string = string.replace("'","")
             string = string.replace("[","")
             string = string.replace("]","")
