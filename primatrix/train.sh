@@ -1,9 +1,6 @@
 #IMAGE_SIZE=224
 #ARCHITECTURE="mobilenet_0.50_${IMAGE_SIZE}"
 ARCHITECTURE="inception_v3"
-
-source activate tensorflow
-
 python -m scripts.retrain \
   --bottleneck_dir=tf_files/bottlenecks \
   --how_many_training_steps=500 \
