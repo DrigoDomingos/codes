@@ -56,7 +56,7 @@ for fold in  train_col:
             cmd = 'ffmpeg -i ' + string + ' -r 0.25 ' +  filebase+ ''
             #print(cmd)
             sp.call(cmd,shell=True)
-            print(filename)
+            print(filename) 
             
 
 
