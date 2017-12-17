@@ -50,7 +50,7 @@ for fold in  train_col:
             #print(string)
             #shutil.copy(string, directory)
             filebase = directory + "/" + filename
-            filebase = filebase.replace(".mp4","_%05d.png")
+            filebase = filebase.replace(".mp4","_%05d.jpeg")
             #print(string)
             #print(filebase)
             cmd = 'ffmpeg -i ' + string + ' -r 0.25 ' +  filebase+ ''
