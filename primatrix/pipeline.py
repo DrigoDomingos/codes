@@ -42,7 +42,7 @@ for fold in  train_col:
             os.makedirs(directory)
     #Loop the files inside directory and move to corresponding folders
     for filename in os.listdir("/home/rodrigo/datascience/projects/pri-matrixFac/micro"):#train_subset:        
-        if  *str(filename)* in str(train_subset):
+        if  str(*filename*) in str(train_subset):
             string = str("/home/rodrigo/datascience/projects/pri-matrixFac/micro/" + str(filename))
             string = string.replace("'","")
             string = string.replace("[","")
