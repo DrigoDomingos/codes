@@ -31,7 +31,7 @@ logging.info("Start - Preparing data for training")
 #Loop the mapping file
 for fold in  train_col:
     if fold not in ['filename','blank']:
-        train_subset = str(pd.DataFrame(train[train[fold] > 0]['filename']).values.tolist())
+        train_subset = str(pd.DataFrame(train[train[fold] > 0]['filename']).values.tolist()).upper()
         #train_subset = train_subset.replace("'","")
         #train_subset = train_subset.replace("[","")
         #train_subset = train_subset.replace("]","")
@@ -42,7 +42,7 @@ for fold in  train_col:
             os.makedirs(directory)
     #Loop the files inside directory and move to corresponding folders
     for filename in os.listdir("/home/rodrigo/datascience/projects/pri-matrixFac/micro"):#train_subset:        
-        if  str(filename) in str(train_subset):
+        if  str(filename).upper() in train_subset:
             string = str("/home/rodrigo/datascience/projects/pri-matrixFac/micro/" + str(filename))
             string = string.replace("'","")
             string = string.replace("[","")
